@@ -6,8 +6,3 @@
 /docs
 *.md
 *.bat
-
-# Config files
-/config.*
-*.config.ini
-!/config.example.ini
