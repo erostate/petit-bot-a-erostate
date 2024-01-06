@@ -194,24 +194,3 @@ module.exports = {
     };
   }
 };
-
-const mp2 = {
-  data: new SlashCommandBuilder()
-      .setName('mp2')
-      .setDescription('Exécute des requêtes à une API')
-      .addUserOption(option => 
-          option.setName('user')
-          .setDescription('L\'utilisateur à mentionner')
-          .setRequired(true)),
-  async execute(interaction) {
-      // Récupérer l'utilisateur mentionné
-      const user = interaction.options.getUser('user');
-
-      // Ici, vous pouvez exécuter vos requêtes à l'API
-      // ...
-
-      // Ensuite, vous pouvez envoyer une réponse à l'utilisateur
-      await interaction.reply(`Commande mp2 exécutée pour l'utilisateur ${user.username}!`);
-  },
-};
-module.exports = mp2;

@@ -18,7 +18,15 @@ const intents = [
   ...config.extraIntents,
 ];
 
-const bot = new Eris.Client(process.env.TOKEN, {
+function getToken() {
+  if (process.env.TOKEN) {
+    return process.env.TOKEN;
+  } else {
+    return config.token;
+  }
+}
+
+const bot = new Eris.Client(getToken(), {
   restMode: true,
   intents: Array.from(new Set(intents)),
   allowedMentions: {

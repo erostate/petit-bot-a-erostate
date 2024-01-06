@@ -2,7 +2,7 @@
 /.idea
 /node_modules
 /welcome.png
-/update.sh
 /docs
 *.md
 *.bat
+*.ini
